@@ -14,7 +14,7 @@ b) O nome do repositorio no Bitbucket segue o seguinte padrao: ARQCP1617tttGxx
 c) Estrutura de diretorios na raiz do repositorio.
 
 A estrutura de diretorios do primeiro nivel já está criada. 
-Existe um diretorio para dada aula modulo das aulas PL. Os exercicios de cada modulo devem ser colocados no diretorio correspondente. 
+Existe um diretorio para cada modulo das aulas PL. Os exercicios de cada modulo devem ser colocados no diretorio correspondente. 
 
 d) Organizacao do diretorio de cada modulo.
 
