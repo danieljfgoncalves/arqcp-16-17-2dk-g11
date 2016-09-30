@@ -9,7 +9,7 @@
 #include "uppercase.h"
 
 /*
- * Module 1 - Exercise 4
+ * Module 1 - Exercise 5
  */
 int main(int argc, char **argv)
 {
