@@ -17,7 +17,7 @@ void string_treatment(char *str1, char *str2){
   
   /* Uses str1 to fill str2 */
   for (i = 0; str1[i] != '\0';){
-	  if(str1[i] == ' ' || str1[i] == ',' || str1[i] == '.') { /* ignores spaces and punctuation */
+	  if(str1[i] >= ' ' && str1[i] <= '/'){ /* ignores spaces and some punctuation */
 		  i++;
 	  }
 	  else if(str1[i] >= 'A' && str1[i] <= 'Z'){ /* changes uppercase to lowercase */
