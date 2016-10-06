@@ -14,20 +14,8 @@
  * *vec - array to verify
  * size - size of given array
  */
-void set_verif(int *vec, int size){
-	int counter = 1;
-	int number_sets = 0;
-	int i;
-	for(i = 0; i < size; i++){
-		if(*(vec + i + 1) == *(vec + i) + 1){
-			counter++;
-			if(counter == 3){
-				number_sets++;
-				counter = 1; /* resets the counter */
-			}
-		} else {
-			counter = 1;
-		}
-	}
-	printf("Number sets: %d\n", number_sets);
+int set_verif(int pos1, int pos2, int pos3){
+	return (pos1 == pos2-1) 
+				? (pos2 == pos3-1) 
+					? 1 : 0 : 0;
 }

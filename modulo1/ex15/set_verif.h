@@ -9,4 +9,4 @@
 /*
  *
  */
-void set_verif(int *vec, int size);
+int set_verif(int pos1, int pos2, int pos3);
