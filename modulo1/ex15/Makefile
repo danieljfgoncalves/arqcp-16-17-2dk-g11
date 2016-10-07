@@ -6,9 +6,9 @@
 #
 
 # variables
-INCLUDES = consecutive_sets.h set_verif.h array_fill.h
-SOURCES = consecutive_sets.c set_verif.c array_fill.c main.c 
-OBJFILES = consecutive_sets.o set_verif.o array_fill.o main.o 
+INCLUDES = increment_set.h set_verif.h array_fill.h
+SOURCES = increment_set.c set_verif.c array_fill.c main.c 
+OBJFILES = increment_set.o set_verif.o array_fill.o main.o 
 EXEC = exec
 
 ${EXEC}: ${OBJFILES}

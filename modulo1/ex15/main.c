@@ -7,9 +7,9 @@
  */
   
 #include <stdio.h>
-#include <math.h>
 #include "array_fill.h"
-#include "consecutive_sets.h"
+#include "increment_set.h"
+#include "set_verif.h"
 
 /*
  * Module 1 - Exercise 15
@@ -18,7 +18,7 @@ int main(){
 	
 	int size = 100;
 	int vec[size];
-	int num_sets;
+	int num_sets = 0;
 	
 	array_fill(vec, size);
 	
@@ -29,7 +29,15 @@ int main(){
 	}
 	printf("\n\n");
 	
-	num_sets = consecutive_sets(vec, size);
+	int bool;
+	for(i = 2; i < size; i++){
+		
+		bool = set_verif(vec + i - 2);
+		
+		if(bool == 1){
+			increment_set(&num_sets);
+		}
+	}
 	
 	printf("Number of sets: %d\n", num_sets);
 	
