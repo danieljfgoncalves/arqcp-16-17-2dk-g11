@@ -11,13 +11,13 @@
 /*
  * Receives an array of integers and prints all its even numbers.
  */
- void even_number_printer(int* n, int* array){
+ void even_number_printer(int size, int* array){
 	 
 	 int i;
 	 
 	 printf("The even numbers in the array are:\n");
 	 
-	 for(i = 0; i < *n; i++){
+	 for(i = 0; i < size; i++){
 		if(array[i] % 2 == 0){
 			printf("%d\n", array[i]);
 		}

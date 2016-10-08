@@ -9,4 +9,4 @@
 /*
  * Receives an array of integers and prints all its even numbers.
  */
- void even_number_printer(int* n, int* array);
+ void even_number_printer(int size, int* array);
