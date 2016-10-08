@@ -14,20 +14,20 @@
  */
 int main(){
 	
-	int n;
+	int size; /* size of the array */
 	int i;
 	
 	printf("Please enter the number of elements: ");
-	scanf("%d", &n);
+	scanf("%d", &size);
 	
-	int numbers[n];
+	int numbers[size];
 	
-	for(i = 0; i < n; i++){
+	for(i = 0; i < size; i++){
 		printf("Please enter a number: ");
 		scanf("%d", &numbers[i]);
 	}
 	
-	even_number_printer(&n, numbers);
+	even_number_printer(size, numbers);
 
 	return 0;
 }

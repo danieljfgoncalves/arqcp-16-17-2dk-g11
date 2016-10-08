@@ -9,25 +9,14 @@
 #include <stdio.h>
 
 /*
- * Checks how many sets of three numbers verify the condition Vi < Vi+1 < Vi+2.
+ * Checks if a set of three consequent elements verify the condition Vi < Vi+1 < Vi+2.
  * 
- * *vec - array to verify
- * size - size of given array
+ * int *first_pos - Address of first element to verify
+ * 
+ * return an int as a bool - 0 for false, 1 for true
  */
-void set_verif(int *vec, int size){
-	int counter = 1;
-	int number_sets = 0;
-	int i;
-	for(i = 0; i < size; i++){
-		if(*(vec + i + 1) == *(vec + i) + 1){
-			counter++;
-			if(counter == 3){
-				number_sets++;
-				counter = 1; /* resets the counter */
-			}
-		} else {
-			counter = 1;
-		}
-	}
-	printf("Number sets: %d\n", number_sets);
+int set_verif(int *first_pos){
+	return (*first_pos < *(first_pos + 1)) 
+				? (*(first_pos + 1) < *(first_pos + 2)) 
+					? 1 : 0 : 0;
 }

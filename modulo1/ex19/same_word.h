@@ -2,7 +2,7 @@
  * Tiago Correia - 1151031@isep.ipp.pt
  * ARQCP - Turma 2DK
  * 
- * set_increment.c
+ * same_word.h
  * 
  */
  
@@ -11,3 +11,5 @@
 /*
  *
  */
+int same_word(char *word1, char *word2);
+	

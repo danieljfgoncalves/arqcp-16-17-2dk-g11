@@ -6,9 +6,9 @@
 #
 
 # variables
-INCLUDES = set_increment.h set_verif.h array_fill.h
-SOURCES = set_increment.c set_verif.c array_fill.c main.c 
-OBJFILES = set_increment.o set_verif.o array_fill.o main.o 
+INCLUDES = increment_set.h set_verif.h array_fill.h
+SOURCES = increment_set.c set_verif.c array_fill.c main.c 
+OBJFILES = increment_set.o set_verif.o array_fill.o main.o 
 EXEC = exec
 
 ${EXEC}: ${OBJFILES}
@@ -22,6 +22,9 @@ ${OBJFILES}: ${SOURCES} ${INCLUDES}
 
 run: ${EXEC}
 	./${EXEC}
+
+debug: ${EXEC}
+	gdb -tui ${EXEC}
 
 clean:
 	rm -f ${OBJFILES} ${EXEC}

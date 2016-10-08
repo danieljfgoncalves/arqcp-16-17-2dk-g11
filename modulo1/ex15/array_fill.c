@@ -23,10 +23,4 @@ void array_fill(int *vec, int size){
 	for(i = 0; i < size; i++){
 		*(vec + i) = rand() % 20; /* rand() generates random numbers between 0 and 20 */
 	}
-	
-	/* prints vec */
-	for(i = 0; i < size; i++){
-		printf("%d  ", *(vec + i));
-	}
-	printf("\n\n\n");
 }
