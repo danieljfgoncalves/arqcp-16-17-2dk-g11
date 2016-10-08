@@ -6,9 +6,9 @@
 #
 
 # variables
-INCLUDES = find_word.h
-SOURCES = find_word.c main.c 
-OBJFILES = find_word.o main.o 
+INCLUDES = same_word.h find_word.h
+SOURCES = same_word.c find_word.c main.c 
+OBJFILES = same_word.o find_word.o main.o 
 EXEC = exec
 
 ${EXEC}: ${OBJFILES}
@@ -22,6 +22,9 @@ ${OBJFILES}: ${SOURCES} ${INCLUDES}
 
 run: ${EXEC}
 	./${EXEC}
+	
+debug: ${EXEC}
+	gdb -tui ${EXEC}
 
 clean:
 	rm -f ${OBJFILES} ${EXEC}

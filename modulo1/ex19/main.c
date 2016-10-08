@@ -14,11 +14,18 @@
  */
 int main(){
 
-	char *str = "Instituto Superior de Engenharia do Porto";
-	char *word = "Porto";
+	char str[] = "Instituto Superior de Engenharia do Porto";
+	char word[] = "Porto";
 	char *initial_addr = str;
 	
-	printf("%p\n", str);
+	char *result = find_word(str, word, initial_addr);
+	
+	if(result == NULL){
+		printf("Word not found!\n");
+	}
+	else {
+		printf("Word found in %p\n", result);
+	}
 	
 	return 0;
 }
