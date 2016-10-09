@@ -43,7 +43,7 @@ char* find_word(char *str, char* word, char* initial_addr){
 		} else if(*(initial_addr + i) == ' '){
 			if (same_word(word, (initial_addr + i + 1)) == 1)
 			{
-				return initial_addr;
+				return initial_addr + i + 1;
 			}
 		} i++;
 	}
