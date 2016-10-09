@@ -6,7 +6,6 @@
  */
  
 #include <stdio.h>
-#include "uppercase.h"
 /*
  * Function to replaces all lowercase letters by their uppercase counterpart.
  * char *str - the string to verify.

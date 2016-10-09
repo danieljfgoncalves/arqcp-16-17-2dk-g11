@@ -6,7 +6,6 @@
  */
  
 #include <stdio.h>
-#include "print_vec.h"
 
 /*
  * Function to print a vector with n number of integers.

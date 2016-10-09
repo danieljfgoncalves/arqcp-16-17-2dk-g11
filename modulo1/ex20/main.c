@@ -37,6 +37,8 @@ int main(){
 	
 	find_all_words(str, word, addrs); // the element that has a 0 value is the last in the array addrs.
 	
+	printf("The string \"%s\" has the word \"%s\" in these addresses:\n\n", str, word);
+	
 	print_pointers_array(addrs);
 
 	return 0;

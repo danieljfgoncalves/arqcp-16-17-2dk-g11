@@ -6,7 +6,6 @@
  */
  
 #include <stdio.h>
-#include "fill_vec.h"
 
 /*
  * Function to store a vector with n number of integers (read from keyboard).
