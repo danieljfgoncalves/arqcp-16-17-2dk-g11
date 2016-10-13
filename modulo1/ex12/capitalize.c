@@ -17,7 +17,10 @@ void capitalize(char *str)
 	// in the ASCII Table
 	char gap = ('a' - 'A');
 	
-	*str -= gap; // Capitalize the first word of the sentence.
+	if(*str >= 'a' && *str <= 'z')
+	{
+		*str -= gap; // Capitalize the first word of the sentence.
+	}
 	
 	str++; // Star the cycle at the next address (index of array)
 	while(*str != '\0')
