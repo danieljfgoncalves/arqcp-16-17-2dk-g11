@@ -21,6 +21,6 @@ void array_fill(int *vec, int size){
 	srand(time(NULL)); /* seeds the rand() function */
 	int i;
 	for(i = 0; i < size; i++){
-		*(vec + i) = rand() % 20; /* rand() generates random numbers between 0 and 20 */
+		*(vec + i) = rand() % 21; /* rand() generates random numbers between 0 and 20 */
 	}
 }
