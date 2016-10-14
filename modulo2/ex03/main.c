@@ -12,7 +12,7 @@
 int op1 = 0, op2 = 0, op3 = 0, res = 0;
 
 /*
- * Module 2 - Exercise 2
+ * Module 2 - Exercise 3
  */
 
 int main(void) {
