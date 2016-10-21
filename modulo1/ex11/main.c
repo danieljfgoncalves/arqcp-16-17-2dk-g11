@@ -15,7 +15,7 @@
  */
 int main(){
 	
-	char str1[] = "A man a plan a canal, Panama.";
+	char str1[] = "A man a plan a , Panama.";
 	  
 	//reads the size of any string in str1
 	int str_size = 1;
