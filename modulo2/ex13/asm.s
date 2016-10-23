@@ -23,10 +23,10 @@ math_operation:
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
 # body of the function
+ 	movl $0, %edx		# clears edx
  	movl c, %eax		# moves c to eax
-	imull b, %eax		# multiply value in b with eax (result stored in eax)
-	movl $0, %edx		# clears edx
-	idivl d				# divides d by eax (result stored in eax)
+	imull b				# multiply value in b with eax (result stored in edx:eax)
+	idivl d				# divides edx:eax by d (result stored in eax)
 	addl a, %eax		# adds value of a to eax
 						# eax is the return value
 

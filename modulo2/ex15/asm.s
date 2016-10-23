@@ -63,7 +63,7 @@ multiplication:
 	
 # body of the function
 	movw op1, %ax		# moves op1 to ax
-	imulw op2, %ax		# multiply op2 to ax
+	imulw op2			# multiply op2 to ax
 						# return is ax
 
 # epilogue
@@ -79,7 +79,7 @@ division:
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
 # body of the function
-	movl $0, %edx		# clears edx
+	movw $0, %dx		# clears edx
 	movw op1, %ax		# moves op1 to ax
 	idivw op2			# divides ax with op2
 						# return is ax
@@ -97,7 +97,7 @@ modulus:
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
 # body of the function
-	movl $0, %edx		# clears edx
+	movw $0, %dx		# clears edx
 	movw op1, %ax		# moves op1 to ax
 	idivw op2			# divides ax with op2
 	movw %dx, %ax		# moves reminder of divion from dx to ax

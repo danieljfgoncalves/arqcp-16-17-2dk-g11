@@ -28,11 +28,11 @@ int main(void) {
 	
 	res = sum();
 	
-	printf("sum = %d:0x%x\n", res,res);
+	printf("sum (op1 + op2) = %d:0x%x\n", res,res);
 	
 	res = sum_op1_op2_sub_op3();
 	
-	printf("sum_op1_op2_sub_op3 = %d:0x%x\n", res,res);
+	printf("sum_op1_op2_sub_op3 (op1 + op2 - op3) = %d:0x%x\n", res,res);
 	
 	return 0;
 }
