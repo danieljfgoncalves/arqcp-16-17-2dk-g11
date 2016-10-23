@@ -33,7 +33,7 @@ summation:
 	movl $I, %ebx		# moves I constant to ebx
 	movl $0, %esi		# initializes esi
 	
-	cmpl %ecx, %ebx		# compares ebx (i) to ecx (n) -> (n - i)
+	cmpl %ecx, %ebx		# compares ebx (i) to ecx (n) -> (i - n)
 	jg end				# jump if i > n
 
 sum_loop:
