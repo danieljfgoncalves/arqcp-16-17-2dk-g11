@@ -39,11 +39,9 @@ sum_op1_op2_sub_op3:
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
 # body of the function
-	movl op1, %ebx   	# place op1 in ebx
-	movl op2, %eax   	# place op2 in eax
-	movl op3, %ecx		# place op3 in ecx
-	addl %ebx, %eax  	# add ebx to eax. Result is in eax
-	subl %ecx, %eax		# subtract ecx to eax. Result is in eax and will be
+	movl op1, %eax   	# place op1 in eax
+	addl op2, %eax  	# add op2 to eax. Result is in eax
+	subl op3, %eax		# subtract op3 to eax. Result is in eax and will be
 						# our return value.
 
 # epilogue
