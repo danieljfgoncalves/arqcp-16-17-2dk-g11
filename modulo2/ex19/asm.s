@@ -28,6 +28,7 @@ temp_change_time:
 	cmpw %bx, %ax				# compares desired temperature with current teperature
 	jg decrease_temperature		# if current_temp > desired_temp
 	jl increase_temperature		# if current_temp < desired_temp
+	jmp end
 	
 decrease_temperature:
 	subw %bx, %ax					# subtracts ax to bx (to get temperature difference)
@@ -40,7 +41,6 @@ increase_temperature:
 	imulw $INCREASE_VALUE, %bx		# multiply ax with DECREASE_VALUE. Result stored in bx
 	imulw $SECONDS_MIN, %bx			# final value in seconds
 	movw %bx, %ax					# moves bx to ax (return ax)
-	jmp end
 
 end:
 	
