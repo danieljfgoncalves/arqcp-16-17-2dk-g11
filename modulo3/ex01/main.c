@@ -11,7 +11,6 @@
 	
 char str[] = "Instituto Superior de Engenharia do Porto";
 char *ptr1 = str;
-int result;
 
 /*
  * Module 3 - Exercise 1
@@ -19,7 +18,7 @@ int result;
 
 int main(void) {
 	
-	result = space_count();
+	int result = space_count();
 	printf("The number of spaces is: %d\n", result);
 
 	return 0;
