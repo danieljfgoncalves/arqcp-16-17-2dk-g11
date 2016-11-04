@@ -38,6 +38,7 @@ zero_loop:
 	cmpw $VALUE, %bx		# compares bx to VALUE (ebx - VALUE)
 	jl skip					# if not greater or equal than VALUE jump to skip		
 	movw $0, (%esi)			# moves 0 to value pointed by esi
+	incl %eax				# increments eax by 1
 
 skip:
 	addl $2, %esi			# increments esi by 2 bytes (next short int)

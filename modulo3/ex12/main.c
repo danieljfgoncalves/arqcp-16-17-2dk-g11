@@ -25,7 +25,7 @@ int main(void) {
 	
 	printf("\nChanged vector:");
 	print_short_vec(vec, num);
-	printf("\nChanged elements: %d", result);
+	printf("\nChanged elements: %d\n", result);
 	
 	return 0;
 }
