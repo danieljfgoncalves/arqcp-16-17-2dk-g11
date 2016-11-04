@@ -15,7 +15,7 @@
 
 .section .text
 
-.global vec_zero			# int vec_sum_even(void)
+.global vec_zero			# int vec_zero(void)
 
 vec_zero:
 
