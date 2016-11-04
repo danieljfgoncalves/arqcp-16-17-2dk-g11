@@ -37,7 +37,6 @@ loop_string:
 	je end
 
 	# body of loop
-	movb (%esi), %bl				# moves pointed char value to bl
 	cmpb $LETTER_B, %bl				# compares bl to LETTER_B (bl - LETTER_B)
 	jne copy_to						# jumps to copy_to if bl is not letter b (lowercase)
 	movb $LETTER_V, %bl				# if bl is letter b (lowercase), moves letter v to bl
