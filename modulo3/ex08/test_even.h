@@ -2,13 +2,13 @@
  * Daniel Goncalves > 1151452@isep.ipp.pt
  * ARQCP - Turma 2DK
  * 
- * ASM.H
+ * TEST_EVEN.H
  * 
  */
  
-#ifndef ASM_H
-#define ASM_H
+#ifndef TEST_EVEN_H
+#define TEST_EVEN_H
 
-int vec_sum_even(void);
+int test_even(void);
 
 #endif

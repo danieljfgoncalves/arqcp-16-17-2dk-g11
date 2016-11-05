@@ -6,9 +6,9 @@
 #
 
 # variables
-INCLUDES = asm.h
-SOURCES = asm.s main.c 
-OBJFILES = asm.o main.o 
+INCLUDES = vec_sum_even.h test_even.h
+SOURCES = vec_sum_even.s test_even.s main.c 
+OBJFILES = vec_sum_even.o test_even.o main.o 
 EXEC = exec
 
 ${EXEC}: ${OBJFILES}

@@ -6,7 +6,8 @@
  * 
  */
 #include <stdio.h>
-#include "asm.h"
+#include "vec_sum_even.h"
+#include "test_even.h"
 
 int num = 5;
 int vec[] = {2, 5465, 1, 1000, 11}; 
