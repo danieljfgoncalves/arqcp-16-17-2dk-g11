@@ -9,8 +9,10 @@
 .section .data
 
 .global ptrvec1				# short pointer to vec1 (32-bit)
+.global ptrvec2				# short pointer to vec2 (32-bit)
 .global ptrvec3				# short pointer to vec3 (32-bit)
-.global ptraux				# aux short pointer (32-bit)
+.global ptraux				# short pointer to array for int exists(void) (32-bit)
+.global x					# short integer for int exists(void) (16-bit)
 .global num					# integer variable (32-bit)
 
 .section .text
@@ -26,16 +28,19 @@ vec_diff:
 # body of the function
 	movl ptrvec1, %esi		# moves short pointer ptrvec1 to esi (source)
 	movl ptrvec3, %edi		# moves short pointer ptrvec3 to edi (destination)
-	movl num, %ecx			# moves num to ecx (loop counter)
-	movl $0, %ebx			# clears ebx
-	movl $0, %eax			# clears eax
-	
+	movl num, %ecx			# moves num to ecx (loop counter)	
 	cmpl $0, %ecx			# compares if ecx is 0
 	je end					# jumps to end if counter is already 0
+
+	movl $0, %eax			# clears eax
+	movl $0, %ebx			# clears ebx
+	
+	movl ptrvec2, %edx		# moves ptrvec2 to ebx (no need to save & restore)
+	movl %edx, ptraux		# moves ebx to prtaux
 	
 loop:
 	movw (%esi), %bx		# moves value pointed by esi to bx
-	movw %bx, ptraux		# moves bx to prtaux
+	movw %bx, x				# moves bx to x variable
 	
 	pushl %eax				# saves eax before call
 	pushl %ecx				# saves ecx before call

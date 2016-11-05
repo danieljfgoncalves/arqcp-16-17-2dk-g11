@@ -8,8 +8,8 @@
 
 .section .data
 
-.global ptraux				# short pointer to value to check (32-bit)
-.global ptrvec2				# short pointer to vec (32-bit)
+.global ptraux				# short pointer to array to check (32-bit)
+.global x					# short integer with value to be checked (16-bit)
 .global num					# integer variable (32-bit)
 
 .section .text
@@ -27,8 +27,8 @@ exists:
 	pushl %esi
 	
 # body of the function
-	movw (ptraux), %bx		# moves pointed value to bx
-	movl ptrvec2, %esi		# moves short pointer to esi
+	movw x, %bx				# moves pointed value to bx
+	movl ptraux, %esi		# moves short pointer to esi
 	movl num, %ecx			# moves num to ecx (loop counter)
 	movl $1, %eax			# sets eax to 1
 	

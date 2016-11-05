@@ -16,10 +16,12 @@ int num = NUM;
 
 short int vec1[] = {2, 5465, 1, 1001, 11, 45, 1000, 999, 3500, 544}; 
 short int *ptrvec1 = vec1;
-short int *ptraux = vec1;
+
+short int x = 0;
 
 short int vec2[] = {20, 5465, 11, 1000, 121, 405, 100, 9, 3500, 544}; 
 short int *ptrvec2 = vec2;
+short int *ptraux = vec2;
 
 int vec3[NUM]; // expected output: {2, 1, 1001, 45, 999}
 int *ptrvec3 = vec3;
