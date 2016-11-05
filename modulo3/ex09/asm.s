@@ -30,7 +30,7 @@ vec_loop:
 	cmpw x, %bx			# compares bx with x (bx - x)
 	jne increment		# if cmpw is not equal, jumps to increment
 	
-	movl %esi, %eax		# moves adress in esi to ax (return value in ax)
+	movl %esi, %eax		# moves adress in esi to eax (return value in eax)
 	jmp end				# jumps to end of function	
 
 increment:
