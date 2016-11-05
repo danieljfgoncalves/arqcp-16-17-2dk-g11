@@ -21,7 +21,6 @@ check_smallest_number:
 	
 # saves registers to be used
 	pushl %esi
-	pushl %ebx
 	
 # body of the function
 	decl %ecx			# subtracts one position to ecx (loop stop condition)
@@ -51,7 +50,6 @@ increment:
 end:
 
 # restore registers
-	popl %ebx
 	popl %esi
 	
 # epilogue
