@@ -12,7 +12,7 @@
 /**
  * Sum integers 1 to n.
  * 
- * n - integer to sum to.
+ * n - integer to sum to (max).
  */
 int sum_n(int n);
 #endif

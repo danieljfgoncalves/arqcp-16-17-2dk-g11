@@ -19,13 +19,13 @@ sum_n:
 	
 # body of the function
 	
-	movl $0, %eax
-	movl 8(%ebp), %ecx
+	movl $0, %eax		# clears eax
+	movl 8(%ebp), %ecx	# moves first parameter to ecx
 
 sum_loop:
 	
-	addl %ecx, %eax
-	loop sum_loop
+	addl %ecx, %eax		# adds ecx to eax
+	loop sum_loop		# loops until ecx is 0
 	
 
 # epilogue
