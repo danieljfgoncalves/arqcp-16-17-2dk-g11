@@ -17,6 +17,11 @@ test_equal:
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
+# save callee registers
+	pushl %ebx
+	pushl %esi
+	pushl %edi
+	
 # body of the function
 	
 	movl $1, %eax			# Sets eax to 1
@@ -43,6 +48,11 @@ false:
 	decl %eax				# decrements eax by 1
 	
 end:
+# restore callee registers
+	popl %edi
+	popl %esi
+	popl %ebx
+
 # epilogue
 	movl %ebp, %esp  	# restore the previous stack pointer ("clear" the stack)
 	popl %ebp     		# restore the previous stack frame pointer

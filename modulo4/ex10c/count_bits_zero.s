@@ -17,7 +17,7 @@ count_bits_zero:
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
-# saves registers
+# saves callee registers
 	pushl %ebx
 	
 # body of the function
@@ -38,7 +38,7 @@ skip:
 	
 end:
 
-# restores registers
+# restores callee registers
 	popl %ebx
 
 # epilogue

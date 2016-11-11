@@ -16,7 +16,11 @@ vec_count_bits_zero:
 # prologue
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
-	
+
+# saves callee registers
+		pushl %ebx
+		pushl %esi
+
 # body of the function
 	
 	movl 12(%ebp), %ecx		# moves 2nd param to ecx (loop counter)
@@ -36,6 +40,10 @@ for:
 end:
 	movl %ebx, %eax			# moves ebx to eax (return value)
 	
+# restores callee registers
+	popl %esi
+	popl %ebx
+
 # epilogue
 	movl %ebp, %esp  	# restore the previous stack pointer ("clear" the stack)
 	popl %ebp     		# restore the previous stack frame pointer

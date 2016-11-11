@@ -18,7 +18,7 @@ calculate:
 # prologue
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
-	
+
 # reserve space for local variables
 	subl $8, %esp		# reserves 8 bytes (2 ints) for local variables (int sum, product)
 
@@ -39,6 +39,7 @@ calculate:
 	pushl $CHAR_SOMA		# pushes '+' to 1st param
 	# no need to save registers
 	call print_result		# calls print_result (function in c)
+	addl $16, %esp			# clears params from stack
 	
 	# 2nd call print_result(char op, int o1, int o2, int res) (from main.c)
 	pushl -8(%ebp)			# pushes product to 4th param
@@ -47,6 +48,7 @@ calculate:
 	pushl $CHAR_MUL			# pushes '*' to 1st param
 	# no need to save registers
 	call print_result		# calls print_result (function in c)
+	addl $16, %esp			# clears params from stack
 	
 	# Return value
 	movl -4(%ebp), %eax		# moves 1st lcl var (sum) to eax

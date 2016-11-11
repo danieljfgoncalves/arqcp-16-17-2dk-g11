@@ -12,10 +12,13 @@
 .global sub_greater    	# int sub_greater(int num1, int num2, int *smaller)
 
 sub_greater:
-
 # prologue
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
+
+# save callee registers
+	pushl %esi
+	pushl %ebx
 	
 # body of the function
 	
@@ -35,6 +38,10 @@ num2_bigger:
 	movl %ebx, (%esi)		# moves ebx to value pointed by esi
 	
 end:
+# restore calle registers
+	popl %ebx
+	popl %esi
+
 # epilogue
 	movl %ebp, %esp  	# restore the previous stack pointer ("clear" the stack)
 	popl %ebp     		# restore the previous stack frame pointer
