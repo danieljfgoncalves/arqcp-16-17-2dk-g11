@@ -8,12 +8,9 @@
  
 #include <stdio.h>
 
-long hex = 0x80000000;
-
-#define mask_shr(pos)	(hex >> (31 - pos))
-#define mask_shl(pos)	(~0 << (pos - 1))
-
-#define mask(l, r)		(~(mask_shr(l)) ^ mask_shl(r))
+#define mask_shr(pos)	(0xFFFFFFFF >> (31 - pos))
+#define mask_shl(pos)	(0xFFFFFFFF << (pos))
+#define mask(l, r)		(mask_shr(l) ^ mask_shl(r))
 
 /*
  * Receives a number and activates all the bits at the left of specified left bit and at right of specified right bit.
@@ -27,9 +24,6 @@ long hex = 0x80000000;
  */
 int activate_bits(int a, int left, int right){
 	
-	unsigned int unsigned_a = a; //cast to unsigned so we can treat negative ints too.
-	
-	return (unsigned_a | mask(left, right));
-	
-
+	return (a | mask(left, right));
 }
+
