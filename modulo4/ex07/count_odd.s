@@ -17,6 +17,10 @@ count_odd:
 	pushl %ebp      	# save previous stack frame pointer
 	movl %esp, %ebp  	# the stack frame pointer for sum function
 	
+# save callee registers
+	pushl %esi
+	pushl %ebx
+	
 # body of the function
 	movl 8(%ebp), %esi		# moves address of the array to esi
 	movl 12(%ebp), %ecx		# moves n to ecx (used to loop through array)
@@ -32,6 +36,10 @@ array_loop:
 next:
 	addl $4, %esi		# increments esi by 4 (int = 4 bytes)
 	loop array_loop		# loops while ecx > 0
+
+# restore calle registers
+	popl %ebx
+	popl %esi
 
 # epilogue
 	movl %ebp, %esp  	# restore the previous stack pointer ("clear" the stack)
