@@ -8,9 +8,9 @@
  
 #include <stdio.h>
 
-#define mask_year(date)		(date << 16)
-#define mask_month(date)	(date >> 24)
-#define mask_day(date)		(date << 8)
+#define mask_year(date)		(date & 0x0000FFFF)
+#define mask_month(date)	(date & 0xFF000000)
+#define mask_day(date)		(date & 0x00FF0000)
 
 /*
  * Returns the greater of two dates.
