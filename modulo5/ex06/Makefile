@@ -6,9 +6,9 @@
 #
 
 # variables
-INCLUDES = save_grades.h save_data.h student.h
-SOURCES = save_grades.s save_data.c main.c 
-OBJFILES = save_grades.o save_data.o main.o 
+INCLUDES = save_data.h s1.h
+SOURCES = save_data.s main.c 
+OBJFILES = save_data.o main.o 
 EXEC = exec
 
 ${EXEC}: ${OBJFILES}

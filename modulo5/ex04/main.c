@@ -7,7 +7,7 @@
  */
 #include <stdio.h>
 #include "student.h"
-#include "save_data.c"
+#include "save_data.h"
 #include "save_grades.h"
 
 #define SIZE 10
@@ -21,7 +21,7 @@ int new_grades[SIZE] = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11};
  */
 int main(void) {
 	
-	// Define a student & a pointer to the array
+	// Define a student & a pointer to student
 	Student s, *s_ptr = &s;
 
 	// Populate student's data 
