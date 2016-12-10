@@ -8,6 +8,8 @@
 
 .section .data
 
+.equ ADDRESS_OFFSET, 128
+
 .section .text
 .global change_address  # void change_address(Student *s, char *new_address);
 
@@ -24,7 +26,7 @@ change_address:
 	
 # body of the function
 	movl 8(%ebp), %esi			# moves student structure to esi
-	addl $128, %esi				# adds 128 to esi to access address (age + number + grades + name  (4 + 4 + 4*10 + 1*80 = 128))
+	addl $ADDRESS_OFFSET, %esi	# adds 128 to esi to access address (age + number + grades + name  (4 + 4 + 4*10 + 1*80 = 128))
 	movl %esi, %eax				# moves esi (address) to eax
 	movl 12(%ebp), %edi			# moves new_address to edi		
 	
