@@ -23,6 +23,6 @@
 void save_data(Student *p, int age, int number, char *name, char *address){
 	p->age = age;
 	p->number = number;
-	strcpy((char*)&(p->name), name);
-	strcpy((char*)&(p->address), address);
+	strcpy(p->name, name);
+	strcpy(p->address, address);
 };

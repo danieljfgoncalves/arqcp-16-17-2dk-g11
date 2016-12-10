@@ -21,8 +21,8 @@ int main(void) {
 	
 	s->age = 25;
 	s->number = 1150000;
-	strcpy((char*)&(s->name), "Tiago");
-	strcpy((char*)&(s->address), "Test address, 30");
+	strcpy(s->name, "Tiago");
+	strcpy(s->address, "Test address, 30");
 	
 	printf("\nBefore address change:\n");
 	printf("Age: %d\nNumber: %d\nName: %s\nAddress: %s\n", student.age, student.number, student.name, student.address);

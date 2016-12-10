@@ -23,10 +23,10 @@ int main(void) {
 	
 	s->age = 26;
 	s->number = 1150000;
-	strcpy((char*)&(s->name), "Tiago");
-	strcpy((char*)&(s->address), "Test address, 30");
+	strcpy(s->name, "Tiago");
+	strcpy(s->address, "Test address, 30");
 	
-	int *grades_ptr = (int *)&(s->grades);
+	int *grades_ptr = (s->grades);
 	int grades[10] = {8, 8, 9, 10, 12, 16, 16, 16, 18, 20};
 	int i;
 	for(i = 0; i < 10; i++){
