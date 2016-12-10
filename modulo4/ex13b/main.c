@@ -10,7 +10,7 @@
 #include "activate_bits.h"
 
 /*
- * Module 4 - Exercise 13a
+ * Module 4 - Exercise 13b
  */
 
 int main(void) {

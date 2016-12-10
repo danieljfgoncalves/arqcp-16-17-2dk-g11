@@ -28,9 +28,7 @@ frequencies:
 	
 grades_loop:
 	movl (%esi), %eax
-	imull $4, %eax			# multiplies value in eax (grade) by 4 (int = 4 bytes) giving the amount of bytes needed to reach the grade position in freq array
-	addl %eax, %edi			# adds eax to edi
-	incl (%edi)				# increments the value pointed by edi
+	incl (%edi, %eax, 4)	# increments 1 to the element of ptrfreq at index eax (base address, index, size)
 	movl ptrfreq, %edi		# restores edi with the address of the ptrfreq (first position of freq)
 	addl $4, %esi			# increments esi by 4 (int = 4 bytes) (next grade)
 	loop grades_loop		# jumps to loop while ecx is higher than 0
