@@ -2,9 +2,10 @@
  * Daniel Goncalves > 1151452@isep.ipp.pt
  * ARQCP - Turma 2DK
  * 
- * create_str.h
+ * create_str.c
  * 
  */
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -41,8 +42,8 @@ char *create_str(char str[80])
 	// we can allocate memory dynamically, that is,  using dynamic memory
 	// allocators (e.g. malloc) that manage the heap (virtual memory).
 	// The heap expands and contracts dynamically at run time as a result 
-	// of calls to allocate/free memory. The heap expands in the opposite direction
-	// of the stack not affecting the stack frame.
-	// For last, the heap allows a more flexible and efficient memory management, 
+	// of calls to allocate/free memory. It also expands in the opposite direction
+	// of the stack not affecting the stack frames.
+	// Summing up, the heap allows a more flexible and efficient memory management, 
 	// allocating and freeing according to the real needs of the program.
 }

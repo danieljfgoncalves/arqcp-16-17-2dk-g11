@@ -11,4 +11,4 @@
  * 
  * char str[80] - string to be copied
  */
-char *create_str(char str[80]) ;
+char *create_str(char str[80]);

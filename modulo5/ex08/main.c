@@ -5,7 +5,6 @@
  * main.c
  * 
  */
-  
 #include <stdio.h>
 #include <stdlib.h>
 #include "create_str.h"

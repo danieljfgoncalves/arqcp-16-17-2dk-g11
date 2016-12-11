@@ -2,12 +2,11 @@
  * Daniel Goncalves > 1151452@isep.ipp.pt
  * ARQCP - Turma 2DK
  * 
- * save_data.h
+ * save_data.c
  * 
  */
 #include <string.h>
 #include "student.h"
-
 
 /**
  * Saves a student's info (passed as parameters) in the fields of a 

@@ -2,7 +2,7 @@
  * Daniel Goncalves > 1151452@isep.ipp.pt
  * ARQCP - Turma 2DK
  * 
- * save_data.h
+ * save_data.c
  * 
  */
 #include <string.h>

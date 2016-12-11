@@ -5,7 +5,6 @@
  * main.c
  * 
  */
-  
 #include <stdio.h>
 #include "student.h"
 #include "save_data.h"
