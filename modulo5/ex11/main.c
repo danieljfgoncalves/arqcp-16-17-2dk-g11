@@ -7,6 +7,7 @@
  */
   
 #include <stdio.h>
+#include <stdlib.h>
 #include "count_even_matrix.h"
 #include "create_matrix.h"
 
@@ -46,6 +47,14 @@ int main(void) {
 	int num_even_numbers = count_even_matrix(m, y, k);
 	
 	printf("The number of even numbers in the matrix is %d.\n", num_even_numbers);
+	
+	// free memory when not used anymore
+	for(i = 0 ; i < y ; i++){
+		free(m[i]); // frees array within matrix
+	}
+
+	// frees matrix
+	free(m);
 	
 	return 0;
 }
